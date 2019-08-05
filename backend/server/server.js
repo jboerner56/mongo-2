@@ -8,8 +8,9 @@ const mongoose = require('mongoose');
 const Data = './data';
 const APIPORT = 3001;
 const bodyParser = require('body-parser');
+const dbPassword = process.env.password;
 // add route once mongo finishs setting up
-const dbRoute = 'mongodb://jboerner56:Football56@cluster0-ri7ld.mongodb.net/test?retryWrites=true&w=majority';
+const dbRoute = `mongodb://jboerner56:${dbPassword}@cluster0-ri7ld.mongodb.net/test?retryWrites=true&w=majority`;
 mongoose.connect(dbRoute, { useNewUrlParser: true });
 // set mongo to variable for easier use and less typos
 const db = mongoose.connection;
