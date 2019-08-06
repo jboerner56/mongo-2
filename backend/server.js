@@ -8,9 +8,8 @@ const mongoose = require('mongoose');
 const Data = './data';
 const APIPORT = 3001;
 const bodyParser = require('body-parser');
-const dbPassword = process.env.password;
 // add route once mongo finishs setting up
-const dbRoute = `mongodb://jboerner56:${dbPassword}@cluster0-ri7ld.mongodb.net/test?retryWrites=true&w=majority`;
+const dbRoute = `mongodb+srv://owner:${process.env.DBPASSWORD}>@cluster0-ri7ld.mongodb.net/test?retryWrites=true&w=majority`;
 mongoose.connect(dbRoute, { useNewUrlParser: true });
 // set mongo to variable for easier use and less typos
 const db = mongoose.connection;
@@ -23,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // fetching data from mongodb cloud
-router.get('/getData', (req, res) => {
+router.get('/', (req, res) => {
     Data.find((error, data) => {
         // will show error if data is not successfully returned
         if (error) return res.json({ success: false, error: error });
