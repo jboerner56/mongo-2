@@ -1,7 +1,11 @@
+.homeContent {
+    background-image: url(../images/moneyBackground.jpg);
+    background-size: cover;
+}
 .homeTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 3rem;
-    color: slateblue;
+    color: greenyellow;
 }

@@ -1,17 +1,15 @@
 import React from 'react';
-
-class Balance extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    }
-    render() {
+import style from '../styles/Expenses.module.css';
+const Balance = (props) => {
         return (
-            <div className="balanceDiv">
-                <h1 className="balanceTitle">Balance</h1>
+            <div className={style.balanceDiv}>
+                <h1 className={style.balanceTitle}>Balance</h1>
+                <div className={style.balanceTotal}>
+                    {/* <p>${props.total.toFixed(2)}</p> */}
+                    <p>$1000</p>
+                </div>
             </div>
         );
-    }
 }
 
 export default Balance;
