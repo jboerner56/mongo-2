@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../styles/Expenses.module.css';
+import style from '../styles/Balance.module.css';
 const Balance = (props) => {
         return (
             <div className={style.balanceDiv}>

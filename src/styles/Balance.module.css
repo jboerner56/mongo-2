@@ -1,0 +1,14 @@
+.balanceDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.balanceTitle {
+    color: greenyellow;
+    margin-bottom: .5rem;
+}
+.balanceTotal{
+    color: greenyellow;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+}
