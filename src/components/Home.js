@@ -1,5 +1,6 @@
 import React from 'react';
 import Expenses from './Expenses';
+import Balance from './Balance';
 class Home extends React.Component {
     render() {
         return (
@@ -11,6 +12,9 @@ class Home extends React.Component {
                 </div>
                 <div className="expenses-title">
                     <Expenses />
+                </div>
+                <div>
+                    <Balance />
                 </div>
             </div>
             );
