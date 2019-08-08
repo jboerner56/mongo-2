@@ -1,5 +1,5 @@
 import React from 'react';
-import Expenses from './Expenses';
+import Transactions from './Transactions';
 import Balance from './Balance';
 import style from '../styles/Home.module.css';
 class Home extends React.Component {
@@ -8,11 +8,11 @@ class Home extends React.Component {
             <div className={style.homeContent}>
                 <div className={style.homeTitle}>
                     <h1>
-                        Budget
+                        Transactions
                     </h1>
                 </div>
                 <div className="expenses-title">
-                    <Expenses />
+                    <Transactions />
                 </div>
                 <div>
                     <Balance />
