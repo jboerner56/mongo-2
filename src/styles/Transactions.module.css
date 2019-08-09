@@ -1,0 +1,10 @@
+.expensesTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: greenyellow;
+}
+.transSubTitles {
+    display: flex;
+    flex-direction: row;
+}

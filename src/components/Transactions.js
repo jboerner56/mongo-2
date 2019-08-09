@@ -1,6 +1,7 @@
 import React from 'react';
 import TransactionList from './TransactionList';
 import data from '../Data/data';
+import style from '../styles/Transactions.module.css';
 class Transactions extends React.Component {
     constructor(props) {
         super(props)
@@ -10,10 +11,18 @@ class Transactions extends React.Component {
     }
     render() {
         return (
-            <div className="expenses-Title">
-                <h2>
+            <div>
+                <h2 className={style.expensesTitle}>
                     Transactions
                 </h2>
+                <div className={style.transSubTitles}>
+                    <div className={style.descriptionTitle}>
+                        <h3>Description</h3>
+                    </div>
+                    <div className={style.amountTitle}>
+                        <h3>Amount</h3>
+                    </div>
+                </div>
                 <div>
                     {this.state.data.map(data => <TransactionList data={data} />)}
                 </div>
