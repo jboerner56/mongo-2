@@ -1,5 +1,6 @@
 import React from 'react';
 import TransactionList from './TransactionList';
+import Balance from './Balance';
 import data from '../Data/data';
 import style from '../styles/Transactions.module.css';
 class Transactions extends React.Component {
@@ -7,6 +8,14 @@ class Transactions extends React.Component {
         super(props)
         this.state = {
             data
+        }
+    }
+    componentWillMount() {
+        this.setState = {
+            ...data,
+            total: data.reduce( (a, b) => {
+                return a + b.amount
+            }, 0)
         }
     }
     render() {
@@ -25,6 +34,10 @@ class Transactions extends React.Component {
                 </div>
                 <div>
                     {this.state.data.map(data => <TransactionList data={data} />)}
+                </div>
+
+                <div>
+                    <Balance total={this.state.total}/>
                 </div>
             </div>
         );

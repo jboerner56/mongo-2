@@ -1,6 +1,6 @@
 import React from 'react';
 import Transactions from './Transactions';
-import Balance from './Balance';
+// import Balance from './Balance';
 import AddTransaction from './AddTransaction';
 import style from '../styles/Home.module.css';
 class Home extends React.Component {
@@ -13,14 +13,14 @@ class Home extends React.Component {
                     </h1>
                 </div>
                 <div className={style.addTrnsactions}>
-                    <AddTransaction />
+                    <AddTransaction onAdd={this.props.addTrans}/>
                 </div>
                 <div className="expenses-title">
                     <Transactions />
                 </div>
-                <div>
+                {/* <div>
                     <Balance />
-                </div>
+                </div> */}
             </div>
             );
     }
