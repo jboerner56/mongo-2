@@ -24,9 +24,13 @@ class AddTransaction extends React.Component{
     render() {
         return(
             <div className={style.addTrans}>
-                <input type='text' value={this.state.description} onChange={this.handleDescChange} />
-                <input type='text' value={this.state.amount} onChange={this.handleAmtChange} />
-                <button onClick={this.AddTrans} />
+                <div className={style.addInputs}>
+                    <input type='text' value={this.state.description} onChange={this.handleDescChange} />
+                    <input type='text' value={this.state.amount} onChange={this.handleAmtChange} />
+                </div>
+                <div className={style.addButton}>
+                    <button onClick={this.AddTrans}>Add Transaction</button>
+                </div>
             </div>
         )
     }
