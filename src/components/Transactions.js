@@ -17,10 +17,10 @@ class Transactions extends React.Component {
                 </h2>
                 <div className={style.transSubTitles}>
                     <div className={style.descriptionTitle}>
-                        <h3>Description</h3>
+                        <h2>Description</h2>
                     </div>
                     <div className={style.amountTitle}>
-                        <h3>Amount</h3>
+                        <h2>Amount</h2>
                     </div>
                 </div>
                 <div>

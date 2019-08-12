@@ -7,4 +7,8 @@
 .transSubTitles {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+.descriptionTitle {
+    margin-left: 5%;
 }
