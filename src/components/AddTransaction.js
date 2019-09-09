@@ -7,16 +7,20 @@ class AddTransaction extends React.Component{
             description: 'description',
             amount: 'amount',
         }
+        this.handleDescChange = this.handleDescChange.bind(this);
+        this.handleAmtChange = this.handleAmtChange.bind(this);
     }
     handleAmtChange(e) {
         this.setState({
-            description: e.target.value
+            amount: e.target.value,
         });
+        console.log("amount change", this.state.amount)
     }
     handleDescChange(e) {
         this.setState({
             description: e.target.value
         });
+        console.log("description change", this.state.description)
     }
     AddTrans(){
         this.props.onAdd(this.state.description, this.state.amount)
@@ -25,8 +29,10 @@ class AddTransaction extends React.Component{
         return(
             <div className={style.addTrans}>
                 <div className={style.addInputs}>
-                    <input type='text' value={this.state.description} onChange={this.handleDescChange} />
-                    <input type='text' value={this.state.amount} onChange={this.handleAmtChange} />
+                    <label>Description</label>
+                    <input type='text' onChange={this.handleDescChange} label='Description'/>
+                    <label>Amount</label>
+                    <input type='text' onChange={this.handleAmtChange} />
                 </div>
                 <div className={style.addButton}>
                     <button onClick={this.AddTrans}>Add Transaction</button>

@@ -6,7 +6,7 @@ const Balance = (props) => {
                 <h1 className={style.balanceTitle}>Balance</h1>
                 <div className={style.balanceTotal}>
                     {/* <p>${props.total.toFixed(2)}</p> */}
-                    {/* <p>$1000</p> */}
+                    <p>$1000</p>
                 </div>
             </div>
         );
